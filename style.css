@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+   background: radial-gradient(circle, #5d1a78, #414b50);
+}
+
+.main {
+  width: 100%;
+}
+
+.main__wrap {
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 50px 0;
+}
+
+.form { 
+  width: 500px; 
+  padding: 30px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, .6);
+  text-align: center;
+}
+
+ .form__input {
+  margin-bottom: 30px;
+} 
+
+.form__input.error{
+  margin-bottom: 40px;
+}
+
+.form__input.error-valid {
+  margin-bottom: 40px;
+}
+
+ .input {
+  position: relative;
+} 
+
+.input__state{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #949494;
+  border-radius: 4px;
+  outline: none;
+  appearance: none;
+  position: relative;
+}
+
+.input__checkbox{
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  z-index: 1;
+  bottom: 30%;
+  right: 2%;
+}
+
+.input__icon-hidden {
+   position: absolute;
+  bottom: 30%;
+  right: 2%; 
+  width: 20px;
+  height: 20px;
+}
+
+.input__icon-visible {
+  position: absolute;
+  bottom: 30%;
+  right: 2%;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.input__checkbox:checked ~.input__icon-hidden {
+  display: none;
+}
+
+.input__checkbox:checked ~.input__icon-visible {
+  display: block;
+}
+
+.input__title {
+  opacity: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: black;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.input__state:focus {
+  border: 1px solid rgba(66, 99, 235);
+}
+
+.input__state:focus::-webkit-input-placeholder {
+  opacity: 0;
+ }
+
+.input__state:focus::-ms-input-placeholder {
+  opacity: 0;
+ } 
+
+ .input__state:focus + .input__title,
+ .input__state:not(:placeholder-shown,.input__state[type='date'])+.input__title {
+  opacity: 1;
+  left: 0;
+  font-size: 12px;
+  transition: opacity .5s linear;
+ } 
+
+ .input__state::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute; 
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  margin: 0;
+}
+
+.input__state::-ms-reveal {
+  display: none;
+}
+
+ .input__error {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  position: absolute;
+  top: 150%;
+  transform: translateY(-150%);  
+  display: none;
+ }
+
+.input__error[data-email],
+.input__error[data-name],
+.input__error[data-surname],
+.input__error[data-password],
+.input__error[data-birthday],
+.input__error[data-repeatPassword]{
+  display: none;
+ }
+
+ .error>.input__state{
+  border-radius: 4px;
+  border: 1px solid rgb(136, 5, 5);
+ }
+
+ .error-valid>.input__state {
+  border-radius: 4px;
+  border: 1px solid rgb(136, 5, 5);
+ }
+
+ .error >.input__error:not(
+ .input__error[data-email], 
+ .input__error[data-name], 
+ .input__error[data-surname], 
+ .input__error[data-password], 
+ .input__error[data-birthday], 
+ .input__error[data-repeatPassword]) {
+  display: block;
+  color: rgb(136, 5, 5);
+}
+
+.error-valid > .input__error[data-email],
+.error-valid > .input__error[data-name],
+.error-valid > .input__error[data-surname],
+.error-valid > .input__error[data-password],
+.error-valid > .input__error[data-birthday],
+.error-valid > .input__error[data-repeatPassword]{
+  display: block;
+  color: rgb(136, 5, 5);
+}
+
+ .submit {
+  width: 50%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: radial-gradient(circle, #5d1a78, #414b50);
+  cursor: pointer;
+  text-align: center;
+ }
+
+ .submit:hover {
+  background: radial-gradient(circle, #481a5a, #414b50);
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+  transition: box-shadow .1s linear;
+ }
+
+.error-valid.submit{
+  pointer-events: none;
+  cursor: none;
+}
+
+.error-valid.submit:hover{
+  background: none;
+  box-shadow: none;
+  transition: none;
+}
+
+

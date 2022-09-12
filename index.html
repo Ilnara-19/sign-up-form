@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body class="body">
+  <main class="main">
+    <div class="main__wrap">
+      <form action="#" class="form" novalidate>
+        <div class="input form__input">
+          <input type="text" class="input__state" id="name" placeholder="Name *" maxlength="50">
+          <label for="name" class="input__title">Name *</label>
+          <p class="input__error">Please fill in name</p>
+          <p class="input__error" data-name>Please enter a valid name</p>
+        </div>
+        <div class="input form__input">
+          <input type="text" class="input__state" id="surname" placeholder="Surname *" maxlength="50">
+          <label for="surname" class="input__title">Surname *</label>
+          <p class="input__error">Please fill in surname</p>
+          <p class="input__error" data-surname>Please enter a valid surname</p>
+        </div>
+        <div class="input form__input">
+          <input type="email" class="input__state" id="email" placeholder="Email *">
+          <label for="email" class="input__title">Email *</label>
+          <p class="input__error">Please fill in email</p>
+          <p class="input__error" data-email>Please enter a valid email address, for example user@mail.ru</p>
+        </div>
+        <div class="input form__input">
+          <input type="password" class="input__state" id="password" placeholder="Password *">
+          <label for="password" class="input__title">Password *</label>
+          <input type="checkbox" class="input__checkbox" id="checkboxPassword">
+          <img class="input__icon-hidden" src="./icons8-закрытый-глаз-20.png">
+          <img class="input__icon-visible" src="./icons8-показать-20.png">
+          <p class="input__error">Please fill in password</p>
+          <p class="input__error" data-password>
+            Please enter a valid password (1 digit, 1 uppercase and lowercase letter, 1 character, length > 8)</p>
+        </div>
+        <div class="input form__input">
+          <input type="password" class="input__state" id="repeatPassword" placeholder="Confirm Password *">
+          <label for="repeatpassword" class="input__title">Confirm Password *</label>
+          <input type="checkbox" class="input__checkbox" id="checkboxRepeatPassword">
+          <img class="input__icon-hidden" src="./icons8-закрытый-глаз-20.png">
+          <img class="input__icon-visible" src="./icons8-показать-20.png">
+          <p class="input__error">Please fill in password</p>
+          <p class="input__error" data-repeatPassword>Passwords don't match</p>
+        </div>
+        <div class="input form__input">
+          <input type="date" class="input__state" id="birthday">
+          <label for="date" class="input__title">Birthday *</label>
+          <p class="input__error">Please fill in birthday</p>
+          <p class="input__error" data-birthday> Please enter the age from 18</p>
+        </div>
+
+        <button class="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+</body>
+<script src="./index.js"></script>
+
+</html>
